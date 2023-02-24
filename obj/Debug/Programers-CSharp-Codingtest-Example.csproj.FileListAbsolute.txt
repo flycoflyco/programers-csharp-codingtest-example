@@ -1,0 +1,7 @@
+D:\진짜 프로젝트\Programers-CSharp-Codingtest-Example\bin\Debug\Programers-CSharp-Codingtest-Example.exe.config
+D:\진짜 프로젝트\Programers-CSharp-Codingtest-Example\bin\Debug\Programers-CSharp-Codingtest-Example.exe
+D:\진짜 프로젝트\Programers-CSharp-Codingtest-Example\bin\Debug\Programers-CSharp-Codingtest-Example.pdb
+D:\진짜 프로젝트\Programers-CSharp-Codingtest-Example\obj\Debug\Programers-CSharp-Codingtest-Example.csprojAssemblyReference.cache
+D:\진짜 프로젝트\Programers-CSharp-Codingtest-Example\obj\Debug\Programers-CSharp-Codingtest-Example.csproj.CoreCompileInputs.cache
+D:\진짜 프로젝트\Programers-CSharp-Codingtest-Example\obj\Debug\Programers-CSharp-Codingtest-Example.exe
+D:\진짜 프로젝트\Programers-CSharp-Codingtest-Example\obj\Debug\Programers-CSharp-Codingtest-Example.pdb
