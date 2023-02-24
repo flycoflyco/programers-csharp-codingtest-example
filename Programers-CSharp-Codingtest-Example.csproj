@@ -43,9 +43,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ExampleSourceCode_Lv0\Babbling.cs" />
+    <Compile Include="ExampleSourceCode_Lv0\NextNumber.cs" />
+    <Compile Include="ExampleSourceCode_Lv0\Parallel.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="SumOfConsecutiveNumbers.cs" />
+    <Compile Include="ExampleSourceCode_Lv0\SumOfConsecutiveNumbers.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
