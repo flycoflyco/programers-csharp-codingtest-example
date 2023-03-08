@@ -11,7 +11,7 @@ public class Solution {
 			return answer;
 		}
 
-		public static int GetDec(string bin)
+		public int GetDec(string bin)
 		{
 			int result = 0;
 
@@ -52,7 +52,10 @@ public class Solution {
 			if (decNum == 0)
 				return "0";
 
-			
+			if (decNum == 1)
+				return "1";
+
+
 			int mok = decNum;
 			int margin = 0;
 			while(true)
