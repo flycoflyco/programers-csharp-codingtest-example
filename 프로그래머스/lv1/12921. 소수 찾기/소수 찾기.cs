@@ -3,34 +3,30 @@ public class Solution {
 		public int solution(int n)
 		{
 			int answer = 0;
-			//int max = n;
-			//bool[] prime = Enumerable.Repeat<bool>(false, max).ToArray<bool>();
-
-			int[] temp = Enumerable.Repeat<int>(0, n+1).ToArray<int>();
+			bool[] temp = Enumerable.Repeat<bool>(true, n+1).ToArray<bool>();
+			temp[0] = false;
+			temp[1] = false;
 			for ( int i = 2; i<=n;i++ )
 			{
-				temp[i] = i;
+				temp[i] = true;
 				if (i != 2 && i % 2 == 0)
-					temp[i] = 0;
+					temp[i] = false;
 			}
 			for ( int i = 2; i<= n; i++)
 			{
-				if (temp[i] == 0)
+				if (!temp[i])
 					continue;
 					
 				for (int j= i+i; j <= n; j+=i)
 				{
-					temp[j] = 0;
+					temp[j] = false;
 				}
 			}
-
 			for (int i = 0; i < temp.Length; i++)
 			{
-				if (temp[i] != 0)
+				if (temp[i])
 					answer++;
 			}
-
-
 			return answer;
 		}
 }
