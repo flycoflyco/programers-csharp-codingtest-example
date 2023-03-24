@@ -3,61 +3,56 @@ using System.Collections.Generic;
 
 public class Solution {
     public int solution(int[] ingredient) {
-        int answer = 0;
-        List<int> ingredientList = new List<int>(ingredient);
-        List<int> hamburger = new List<int>();
-        int floor = 0;
-        bool isFlag = false;
+			int answer = 0;
+			
+			int i = 0;
 
-        while (ingredientList.Count != 0 && floor < ingredientList.Count)
-        {
-            switch (ingredientList[floor])
-            {
-                case 1:
-                    if (hamburger.Count != 0 && hamburger[hamburger.Count - 1] == 3)
-                    {
-                        answer++;
-                        hamburger.RemoveRange(hamburger.Count - 3, 3);
-                        ingredientList.RemoveRange(floor - 3, 4);
-                        isFlag = true;
-                        break;
-                    }
+			List<int> ingList = new List<int>(ingredient);
+			List<int> buger = new List<int>(4);
 
-                    hamburger.Add(ingredientList[floor]);
-                    break;
+			while (i < ingList.Count)
+			{
+				int inNum = ingList[i];
 
-                case 2:
-                    if (hamburger.Count == 0)
-                        break;
+				if (buger.Count == 0 && inNum == 1)
+				{
+					buger.Add(inNum);
+				}
+				else if (buger.Count == 1 && buger[0] == 1 && inNum == 2)
+				{
+					buger.Add(inNum);
+				}
+				else if (buger.Count == 2 && inNum == 3)
+				{
+					buger.Add(inNum);
+				}
+				else if (buger.Count == 3 && inNum == 1)
+				{
+					buger.Add(inNum);
+				}
+				else
+				{
+					buger = new List<int>(4);
+					buger.Add(inNum);
+				}
 
-                    if (hamburger[hamburger.Count - 1] == 1)
-                        hamburger.Add(ingredientList[floor]);
-                    else
-                        hamburger.Clear();
-                    break;
+				i++;
 
-                case 3:
-                    if (hamburger.Count == 0)
-                        break;
+				if (buger.Count == 4)
+				{
+					ingList.RemoveRange(i - 4, 4);
+					buger = new List<int>(4);
+					answer++;
 
-                    if (hamburger[hamburger.Count - 1] == 2)
-                        hamburger.Add(ingredientList[floor]);
-                    else
-                        hamburger.Clear();
-                    break;
-            }
+					if (i - 4 - 2 < 0)
+						i = 0;
+					else
+						i = i - 4 - 2;
 
-            if (isFlag)
-            {
-                floor = floor - 3 < 0? 0 : floor - 3;
-                isFlag = false;
-            }
-            else
-            {
-                floor++; 
-            }
-        }
-
-        return answer;
+					if (ingList.Count == 0)
+						break;
+				}
+			}
+			return answer;
     }
 }
